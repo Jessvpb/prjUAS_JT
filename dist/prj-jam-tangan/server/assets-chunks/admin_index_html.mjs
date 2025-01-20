@@ -16,8 +16,8 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><li
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
   <link rel="stylesheet" href="styles-5INURTSO.css"></head>
-  <body><!--nghm-->
-    <app-root ng-version="19.0.6" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-login ngh="0"><div class="bg-gradient-primary"><div id="layoutAuthentication"><div id="layoutAuthentication_content"><main><div class="container"><div class="row justify-content-center"><div class="col-xl-10 col-lg-12 col-md-9"><div class="card o-hidden border-0 shadow-lg my-5"><div class="card-body p-0"><div class="row"><div class="col-lg-6 d-none d-lg-block bg-login-image"></div><div class="col-lg-6"><div class="p-5"><div class="text-center"><h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1></div><form novalidate class="user ng-untouched ng-pristine ng-invalid"><div class="form-group"><label for="inputEmail">Enter Email Address</label><input type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="name@example.com" formcontrolname="email" autocomplete="on" class="form-control form-control-user ng-untouched ng-pristine ng-invalid" value><!----></div><div class="form-group"><label for="inputPassword">Password</label><input type="password" id="exampleInputPassword" placeholder="Password" formcontrolname="password" autocomplete="on" class="form-control form-control-user ng-untouched ng-pristine ng-invalid" value><!----></div><div class="form-group"><div class="custom-control custom-checkbox small"><input type="checkbox" id="customCheck" class="custom-control-input"><label for="customCheck" class="custom-control-label">Remember Me</label></div></div><button type="submit" class="btn btn-primary btn-user btn-block"> Login </button><hr><a href="https://accounts.google.com/" class="btn btn-google btn-user btn-block"><i class="fab fa-google fa-fw"></i> Login with Google </a><a href="https://www.facebook.com/" class="btn btn-facebook btn-user btn-block"><i class="fab fa-facebook-f fa-fw"></i> Login with Facebook </a></form><hr><div class="card-footer text-center py-3"><!----><!----><div class="text-center"><a routerlink="/register" class="small" href="/register">Need an account? Sign up!</a></div></div></div></div></div></div></div></div></div></div></main></div><div id="layoutAuthentication_footer"><footer class="py-4 bg-light mt-auto"><div class="container-fluid px-4"><div class="d-flex align-items-center justify-content-between small"><div class="text-muted">Copyright © LCI Group 2025</div><div><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a></div></div></div></footer></div></div></div></app-login><!----></app-root>
+  <body id="page-top"><!--nghm-->
+    <app-root ng-version="19.0.6" ngh="0" ng-server-context="ssg"><router-outlet></router-outlet><!----></app-root>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -29,6 +29,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><li
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.js"></script>
     <!-- <script src="js/scripts.js"></script> -->
-  <script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-FAVXHR54.js" type="module"></script>
+  <script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-PRVCL4G5.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"21":"t0","26":"t1","43":"t2","44":"t3"},"c":{"21":[],"26":[],"43":[],"44":[]}},{"c":{"0":[{"i":"c133111092","r":1}]}}]}</script></body></html>`;
+<script id="ng-state" type="application/json">{"__nghData__":[{"c":{"0":[]}}]}</script></body></html>`;

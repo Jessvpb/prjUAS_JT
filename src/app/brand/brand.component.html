@@ -1,1 +1,127 @@
-<p>brand works!</p>
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-start justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800" style="font-weight: bold">BRAND</h1>
+  </div>
+  <div class="row">
+    <!-- Form Input -->
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <form class="m-4" (submit)="simpanBrand(brandForm)" #brandForm="ngForm">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="kdBrand" class="form-label">Kode Brand</label>
+              <input
+                type="text"
+                [ngClass]="
+                  kdBrand.invalid && brandForm.submitted ? 'is-invalid' : ''
+                "
+                class="form-control"
+                id="kdBrand"
+                ngModel
+                name="kdBrand"
+                #kdBrand="ngModel"
+                required
+              />
+              <div
+                *ngIf="kdBrand.invalid && brandForm.submitted"
+                class="invalid-feedback"
+              >
+                Kode Brand harus diisi
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="namaB" class="form-label">Nama Brand</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaB"
+                ngModel
+                name="namaB"
+                #namaB="ngModel"
+                required
+              />
+              <div
+                *ngIf="namaB.invalid && brandForm.submitted"
+                class="invalid-feedback"
+              >
+                Nama Brand harus diisi
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">{{ mode }}</button>
+          &nbsp;
+          <button (click)="onReset()" type="reset" class="btn btn-danger">
+            Reset
+          </button>
+        </form>
+        <div
+          *ngIf="messageExecute != ''"
+          class="bg-success m-4 p-2 text-dark bg-opacity-25"
+        >
+          <h6>{{ messageExecute }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <hr style="border: 1px solid royalblue" /> -->
+  <br />
+  <ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">List Brand</li>
+  </ol>
+  <div class="row">
+    <!-- Table Data Brand -->
+    <div class="col-md-12">
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          Data Brand
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Kode Brand</th>
+                <th>Nama Brand</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody *ngIf="brandList.length > 0">
+              <tr
+                *ngFor="
+                  let brand of brandList
+                    | paginate : { itemsPerPage: 5, currentPage: p }
+                "
+              >
+                <td>{{ brand.kdBrand }}</td>
+                <td>{{ brand.namaB }}</td>
+                <td>
+                  <div style="display: flex; justify-content: center">
+                    <button
+                      (click)="tampilData(brand, brandForm)"
+                      class="btn btn-outline-primary btn-sm"
+                    >
+                      EDIT
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div style="display: flex; justify-content: center">
+                    <button
+                      (click)="hapusBrand(brand)"
+                      class="btn btn-outline-danger btn-sm"
+                    >
+                      DELETE
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
